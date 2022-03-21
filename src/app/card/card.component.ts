@@ -12,8 +12,8 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public name = 'Card name';
-  public number = '0000 0000 0000 0000';
-  public amount = '4989,33₽';
-  public expirationDate = '02/33';
+  public name:string = 'Card name';
+  public number:string = '0000 0000 0000 0000';
+  public amount:string = '4989,33₽';
+  public expirationDate:string = '02/33';
 }
