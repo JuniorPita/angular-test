@@ -1,0 +1,75 @@
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 250px;
+    width: 237px;
+    height: 140px;
+    background-color: #0094FF;
+    border-radius: 7px;
+
+    &__content {
+        position: relative;
+        padding: 12px 11px 9px 11px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "title logo"
+        "num num"
+        "amount date";
+        align-items: center;
+        height: 0px;
+        color: #FFF;
+    }
+
+    &__title {
+        width: 59px;
+        height: 14px;
+        grid-area: title;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        margin-bottom: 12px;
+    }
+
+    &__logo {
+        grid-area: logo;
+        text-align: right;
+        margin-bottom: 16px;
+        
+        img {
+            width: 27px;
+            height: 9px;
+        }
+    }
+
+    &__num {
+        width: 137px;
+        height: 16px;
+        display: block;
+        grid-area: num;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        margin-bottom: 46px;
+    }
+
+    &__amount {
+        width: 80px;
+        height: 21px;
+        grid-area: amount;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21px;
+    }
+
+    &__date {
+        height: 12px;
+        grid-area: date;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        text-align: right;
+        margin-top: 10px;
+    }
+}
