@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,14 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
+  VisaSystem: boolean = true;
 
-  constructor() { }
+  @Input()
+    name:any
+
+  @Input()
+    number:any
+
+  @Input()
+    amount:any
+
+  @Input()
+    expirationDate:any
+
+  @Input()
+    paymentSystem:any
 
   ngOnInit(): void {
+    if (this.paymentSystem === 'Mastercard') {
+      this.VisaSystem = !this.VisaSystem;
+    }
   }
-
-  public name:string = 'Card name';
-  public number:string = '0000 0000 0000 0000';
-  public amount:string = '4989,33₽';
-  public expirationDate:string = '02/33';
 }

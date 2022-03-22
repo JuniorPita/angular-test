@@ -3,7 +3,10 @@
         <div class="card__content">
             <h2 class="card__title">{{ name }}</h2>
             <div class="card__logo">
-                <img src="../assets/visa.png" alt="Card Logo"/>
+                <img src="../assets/visa.png" *ngIf="VisaSystem; else MasterCardSystem" alt="Card Logo"/>
+                <ng-template #MasterCardSystem>
+                    <img src="../assets/mastercard-icon.svg" alt="Card Logo"/>
+                </ng-template>
             </div>
 
             <span class="card__num">
