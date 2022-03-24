@@ -18,4 +18,9 @@
     <p [appAttribute]="attrbutes">Start editing to see some magic happen :)</p>
 
     <button (click)="onClick()">Change attr</button>
+
+    <hr/>
+
+    <p>{{ 24637423.123 | myPipe: 'ru-RU' }}</p>
+    <p>{{ 24637423.123 | myPipe: 'en-US' }}</p>
 </div>
